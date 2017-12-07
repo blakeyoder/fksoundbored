@@ -1,0 +1,2 @@
+recursive-include fksoundbored/templates *
+recursive-include fksoundbored/static *
