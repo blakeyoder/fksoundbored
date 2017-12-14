@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
   </head>
   <body>
-    Welcome to FK-Soundbored
+    Fictive Kin Soundbored
+    {% for sound in data %}
+    <audio controls>
+      <source src={{sound.url}} type"audio/mp3"/>
+    </audio>
+    {% endfor%}
   </body>
 </html>
