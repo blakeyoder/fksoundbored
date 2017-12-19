@@ -8,9 +8,19 @@
   <body>
     Fictive Kin Soundbored
     {% for sound in data %}
-    <audio controls>
-      <source src={{sound.url}} type"audio/mp3"/>
-    </audio>
+    <div class='button__wrapper'>
+      <button type="button" onClick="playSound('{{sound.name}}')">{{sound.name}}</button>
+      <audio id='{{sound.name}}'controls loop style="display:none">
+        <source src={{sound.url}} type"audio/mp3"/>
+      </audio>
+    </div>
     {% endfor%}
   </body>
 </html>
+
+
+  <script>
+    function playSound(sound){
+      document.getElementById(sound).play();
+    }
+  </script>
