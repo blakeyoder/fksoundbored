@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <title>FK-Soundbored</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet"> 
+    <script src="{{ url_for('static', filename='play.js') }}"></script>
   </head>
   <body>
-    Fictive Kin Soundbored
+    <h1>Fictive Kin Soundbored</h1>
     {% for sound in data %}
     <div class='button__wrapper'>
       <button type="button" onClick="playSound('{{sound.name}}')">{{sound.name}}</button>
@@ -18,9 +20,3 @@
   </body>
 </html>
 
-
-  <script>
-    function playSound(sound){
-      document.getElementById(sound).play();
-    }
-  </script>

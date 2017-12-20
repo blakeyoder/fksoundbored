@@ -1,3 +1,25 @@
 body {
   font-size: 20px;
+  background-color: black;
+  color: white;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+h1{
+  text-align: center;
+}
+
+.button__wrapper{
+  padding: 20px 0;
+  max-width: 800px;
+  margin:0 auto;
+}
+
+button{
+  display: block;
+  float: left;
+  height: 80px;
+  width: 30%;
+  padding: 0;
+  margin: 1.6%;
 }
