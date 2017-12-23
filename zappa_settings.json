@@ -1,6 +1,6 @@
 {
     "dev": {
-        "app_function": "fksoundbored.__init__.app",
+        "app_function": "fksoundbored.app",
         "aws_region": "us-east-1",
         "profile_name": "default",
         "project_name": "fksoundbored",
