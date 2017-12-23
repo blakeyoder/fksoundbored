@@ -9,14 +9,14 @@
   </head>
   <body>
     <h1>Fictive Kin Soundbored</h1>
-    {% for sound in data %}
     <div class='button__wrapper'>
+    {% for sound in data %}
       <button type="button" onClick="playSound('{{sound.name}}')">{{sound.name}}</button>
       <audio id='{{sound.name}}'controls loop style="display:none">
         <source src={{sound.url}} type"audio/mp3"/>
       </audio>
-    </div>
     {% endfor%}
+    </div>
   </body>
 </html>
 
