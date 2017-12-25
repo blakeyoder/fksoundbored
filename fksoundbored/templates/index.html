@@ -12,7 +12,7 @@
     <div class='button__wrapper'>
     {% for sound in data %}
       <button type="button" onClick="playSound('{{sound.name}}')">{{sound.name}}</button>
-      <audio id='{{sound.name}}'controls loop style="display:none">
+      <audio id='{{sound.name}}'controls style="display:none">
         <source src={{sound.url}} type"audio/mp3"/>
       </audio>
     {% endfor%}

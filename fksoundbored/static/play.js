@@ -1,3 +1,4 @@
-function playSound(sound){
-  document.getElementById(sound).play();
+function playSound(el){
+  soundClip = document.getElementById(el) 
+  soundClip.play();
 }
