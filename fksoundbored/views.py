@@ -1,11 +1,22 @@
 import os
-from flask import render_template
+from flask import render_template, jsonify
 from fksoundbored import app
 import boto3
 
 
 @app.route('/')
 def index():
+
+    data = get_data()
+    return render_template('index.html', data=data)
+
+
+@app.route('/api')
+def api():
+    return jsonify(get_data())
+
+
+def get_data():
     BUCKET = 'fksoundbored'
 
     client = boto3.client('s3',
@@ -26,4 +37,4 @@ def index():
         obj_dict['url'] = "https://s3.amazonaws.com/{}/{}".format(BUCKET, obj['Key'])
         data.append(obj_dict)
 
-    return render_template('index.html', data=data)
+    return data
