@@ -1,6 +1,8 @@
-# FK-Soundbored
+# Fictive Kin Soundbored™
+Re-live the 90s with this Fictive Kin inspired soundboard. There might even be a perfect prank call buried in the permutations on this board. Currently, the production site is hosted [here](https://ao5h38vfn1.execute-api.us-east-1.amazonaws.com/dev/)
 
-FK-Soundbored description
+# Adding more sounds to the board
+To get a new sound added to the board, please open an issue with 1. The name of the button 2. A link to the soundfile, and 3. Express written consent given if someone other than you is featured in the soundclip
 
 ## Quick Start
 
@@ -41,19 +43,3 @@ For example, on Ubuntu:
    and it is *ignored* by Git - make sure to put a proper configuration file to a production environment when
    deploying
 
-
-## Deployment
-
-If you are interested in an out-of-the-box deployment automation, check out accompanying
-[`cookiecutter-flask-ansible`](https://github.com/candidtim/cookiecutter-flask-ansible).
-
-Or, check out [Deploying with Fabric](http://flask.pocoo.org/docs/0.12/patterns/fabric/#fabric-deployment) on one of the
-possible ways to automate the deployment.
-
-In either case, generally the idea is to build a package (`make sdist`), deliver it to a server (`scp ...`),
-install it (`pip install fksoundbored.tar.gz`), ensure that configuration file exists and
-`FKSOUNDBORED_SETTINGS` environment variable points to it, ensure that user has access to the
-working directory to create and write log files in it, and finally run a
-[WSGI container](http://flask.pocoo.org/docs/0.12/deploying/wsgi-standalone/) with the application.
-And, most likely, it will also run behind a
-[reverse proxy](http://flask.pocoo.org/docs/0.12/deploying/wsgi-standalone/#proxy-setups).
