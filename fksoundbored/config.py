@@ -10,5 +10,5 @@ class DevConfig(BaseConfig):
 
 class ProductionConfig(BaseConfig):
     DEBUG=False
-    FLASK_DEBUG=True
+    FLASK_DEBUG=False
 
