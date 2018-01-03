@@ -6,7 +6,6 @@ import boto3
 
 @app.route('/')
 def index():
-
     data = get_data()
     return render_template('index.html', data=data)
 
